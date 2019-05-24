@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        div.general{
+            background-color:blue;
+            width:800px;
+            margin:auto;
+        }
+
+        #example1 {
+            border: 10px double black;
+            padding: 0 25px;
+            background: url(paper.gif);
+            background-repeat: no-repeat;
+            background-origin: padding-box;
+            margin:0 auto 20px;
+            width:300px;
+        }
+
+        #example2 {
+            border: 10px double black;
+            padding: 0 25px;
+            background: url(paper.gif);
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            margin:30px auto 40px;
+            width:300px;
+        }
+
+        #example3 {
+            border: 10px double black;
+            padding: 0 25px;
+            background: url(paper.gif);
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            margin:30px auto 0;
+            width:300px;
+        }
+
+        h2,p{
+            margin-left:inherit;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="general">
+<div id="example1">
+    <h2>Hello World</h2>
+    <p>The background image starts from the upper left corner of the padding edge.</p>
+</div>
+<div id="example2">
+    <h2>Hello World</h2>
+    <p>The background image starts from the upper left corner of the border.</p>
+</div>
+<div id="example3">
+    <h2>Hello World</h2>
+    <p>The background image starts from the upper left corner of the content.</p>
+</div>
+</div>
+
+</body>
+</html>
