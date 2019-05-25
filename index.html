@@ -4,38 +4,16 @@
     <style>
 
         div.general{
-            background-color:blue;
+            background-color:powderblue;
             width:800px;
             margin:auto;
+            border:2px solid green;
         }
 
         #example1 {
             border: 10px double black;
             padding: 0 25px;
-            background: url(paper.gif);
-            background-repeat: no-repeat;
-            background-origin: padding-box;
             margin:0 auto 20px;
-            width:300px;
-        }
-
-        #example2 {
-            border: 10px double black;
-            padding: 0 25px;
-            background: url(paper.gif);
-            background-repeat: no-repeat;
-            background-origin: border-box;
-            margin:30px auto 40px;
-            width:300px;
-        }
-
-        #example3 {
-            border: 10px double black;
-            padding: 0 25px;
-            background: url(paper.gif);
-            background-repeat: no-repeat;
-            background-origin: content-box;
-            margin:30px auto 0;
             width:300px;
         }
 
@@ -43,23 +21,62 @@
             margin-left:inherit;
         }
 
+        #example2 table{
+            margin:auto;
+        }
+
+        #example2 #name,
+        #example2 #password{
+            border:2px solid #000000;
+            width:170px;
+            height:18px;
+            outline: 2px solid blueviolet;
+        }
+
+        #example2 #loggedin{
+            margin:5px auto;
+            display:block;
+            background-color:green;
+            border:2px solid black;
+            color:white;
+            width:100px;
+            height:30px;
+            padding:5px;
+        }
     </style>
 </head>
 <body>
 
 <div class="general">
-<div id="example1">
-    <h2>Hello World</h2>
-    <p>The background image starts from the upper left corner of the padding edge.</p>
-</div>
-<div id="example2">
-    <h2>Hello World</h2>
-    <p>The background image starts from the upper left corner of the border.</p>
-</div>
-<div id="example3">
-    <h2>Hello World</h2>
-    <p>The background image starts from the upper left corner of the content.</p>
-</div>
+
+    <div id="example1">
+        <h2>Hello World</h2>
+        <p>The background image starts from the upper left corner of the padding edge.</p>
+    </div>
+
+    <div id="example2">
+        <form>
+            <table cellspacing="0">
+                <tr>
+                    <td>
+                        <label for="name">User</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" placeholder="Username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password</label>
+                    </td>
+                    <td>
+                        <input type="text" id="password" placeholder="Password">
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Logged In" id="loggedin">
+        </form>
+    </div>
 </div>
 
 </body>
