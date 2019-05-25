@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+<title>Logged In</title>
 <head>
+    <link rel="shortcut icon" href="phoneBook.png" />
     <style>
 
         div.general{
@@ -19,6 +21,21 @@
 
         h2,p{
             margin-left:inherit;
+            text-align:justify;
+            text-decoration:none;
+            text-shadow:none;
+            letter-spacing:0;
+            word-spacing: 0;
+            white-space: normal;
+            font-family:Arial, "Times New Roman";
+            font-style:normal;
+            font-size:medium;
+            font-weight:normal;
+            font-variant:normal;
+        }
+
+        h2{
+            text-align: center;
         }
 
         #example2 table{
@@ -30,7 +47,6 @@
             border:2px solid #000000;
             width:170px;
             height:18px;
-            outline: 2px solid blueviolet;
         }
 
         #example2 #loggedin{
@@ -42,6 +58,19 @@
             width:100px;
             height:30px;
             padding:5px;
+            outline-style:none;
+        }
+
+        #example2 label{
+            text-decoration: none;
+            text-shadow:none;
+            white-space: normal;
+            letter-spacing:0;
+            font-family:Arial, "Times New Roman";
+            font-style:normal;
+            font-size:medium;
+            font-weight:normal;
+            font-variant:normal;
         }
     </style>
 </head>
@@ -50,8 +79,8 @@
 <div class="general">
 
     <div id="example1">
-        <h2>Hello World</h2>
-        <p>The background image starts from the upper left corner of the padding edge.</p>
+        <h2><bdo dir="ltr">Hello World</bdo></h2>
+        <p><bdo dir="ltr">The background image starts from the upper left corner of the padding edge.</bdo></p>
     </div>
 
     <div id="example2">
@@ -59,18 +88,18 @@
             <table cellspacing="0">
                 <tr>
                     <td>
-                        <label for="name">User</label>
+                        <label for="name"><bdo dir="ltr">User</bdo></label>
                     </td>
                     <td>
-                        <input type="text" id="name" placeholder="Username">
+                        <input type="text" id="name" placeholder="Username" onclick="enablePassword()" autofocus>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="password">Password</label>
+                        <label for="password"><bdo dir="ltr">Password</bdo></label>
                     </td>
                     <td>
-                        <input type="text" id="password" placeholder="Password">
+                        <input type="text" id="password" placeholder="Password" disabled>
                     </td>
                 </tr>
             </table>
@@ -78,6 +107,18 @@
         </form>
     </div>
 </div>
-
+<script>
+    function enablePassword(){
+        var i,numberSpace=0;
+        for(i=0;i<document.getElementById("name").value.length;i++){
+            if(document.getElementById("name").value.charAt(i)==' '){
+                numberSpace++;
+            }
+        }
+        if(document.getElementById("name").value.length!=numberSpace && document.getElementById("name").value!=''){
+            document.getElementById("password").disabled=false;
+        }
+    }
+</script>
 </body>
 </html>
