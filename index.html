@@ -49,6 +49,16 @@
             height:18px;
         }
 
+        /*#example2 #seePassword:checked*/
+        input[type='checkbox']:checked:after{
+            border:solid #000000 2px;
+            background-color:#ffffff !important;
+            color:#ffffff !important;
+            height:20px;
+            width:calc(100% - 159px);
+            margin-left:calc(100% - calc(100% - 160px));
+        }
+
         #example2 #loggedin{
             margin:5px auto;
             display:block;
@@ -99,7 +109,15 @@
                         <label for="password"><bdo dir="ltr">Password</bdo></label>
                     </td>
                     <td>
-                        <input type="text" id="password" placeholder="Password" disabled>
+                        <input type="password" id="password" placeholder="Password" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="seePassword"><bdo dir="ltr">See Password</bdo></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="seePassword">
                     </td>
                 </tr>
             </table>
